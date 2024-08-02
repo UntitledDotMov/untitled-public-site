@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "1350:3000"  # Adjust the port as needed
+    environment:
+      - NODE_ENV=production

@@ -1,0 +1,6 @@
+.scroller {
+  grid-column: 1 / span 18;
+  @media (max-width: $mantine-breakpoint-sm) {
+    grid-column: 1 / span 6;
+  }
+}
