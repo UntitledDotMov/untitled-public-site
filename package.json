@@ -1,0 +1,41 @@
+{
+  "name": "next-app-mantine-v7-tss-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@mantine/core": "^7.8.0",
+    "@mantine/dates": "^7.11.2",
+    "@mantine/form": "^7.6.0",
+    "@mantine/hooks": "^7.8.0",
+    "@mantine/modals": "^7.7.1",
+    "@mantine/notifications": "^7.7.1",
+    "@mantine/vanilla-extract": "^7.11.2",
+    "@prisma/client": "5.17.0",
+    "@tabler/icons-react": "^3.11.0",
+    "@vidstack/react": "^1.11.30",
+    "dayjs": "^1.11.12",
+    "next": "^14.1.4",
+    "prisma": "^5.17.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "tss-react": "^4.9.6",
+    "vidstack": "^0.6.15"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.4",
+    "prettier": "^3.0.3",
+    "typescript": "^5"
+  },
+  "packageManager": "yarn@4.3.1+sha512.af78262d7d125afbfeed740602ace8c5e4405cd7f4735c08feb327286b2fdb2390fbca01589bfd1f50b1240548b74806767f5a063c94b67e431aabd0d86f7774"
+}

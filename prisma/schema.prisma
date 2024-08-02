@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Video {
+  id          Int              @id @default(autoincrement())
+  uploadedAt  DateTime         @default(now())
+  title       String
+  description String?
+  youtubeID   String?
+  public      Boolean          @default(false)
+  playlists   VideoToPlaylist[]
+  live       Boolean?         @default(false)
+}
+
+model Playlist {
+  id          Int              @id @default(autoincrement())
+  videos      VideoToPlaylist[]
+  title       String
+  description String?
+}
+
+model VideoToPlaylist {
+  id            Int       @id @default(autoincrement())
+  video         Video     @relation(fields: [videoId], references: [id])
+  videoId       Int
+  playlist      Playlist  @relation(fields: [playlistId], references: [id])
+  playlistId    Int
+  playlistIndex Int
+
+  @@unique([videoId, playlistId])
+}

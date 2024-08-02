@@ -1,0 +1,14 @@
+.videoBar {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 5rem;
+  grid-gap: 1rem;
+  grid-template-rows: auto;
+  grid-column: span 18;
+}
+
+.videoBarContainer {
+  display: grid;
+  grid-auto-flow: row;
+  grid-column: span 18;
+}
