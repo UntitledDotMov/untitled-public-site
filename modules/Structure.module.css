@@ -3,4 +3,8 @@
   grid-template-columns: repeat(18, 1fr);
   gap: 1rem;
   grid-auto-rows: auto;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }

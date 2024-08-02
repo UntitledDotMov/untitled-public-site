@@ -5,7 +5,9 @@ import RecentVideoBar from '@/components/RecentVideoBar';
 import structure from '@/modules/Structure.module.css';
 import VideoPlayer from '@/components/VideoPlayer';
 import { fetchRecentVideoIDs, fetchVideo, Video } from '@/lib/api';
-import { title } from 'process';
+import text from '@/modules/Text.module.css';
+import scrollers from '@/modules/Scrollers.module.css';
+import videoplayer from '@/modules/VideoPlayer.module.css';
 
 export default function Home() {
   const [video, setVideo] = useState<Video | null>(null);
@@ -34,8 +36,10 @@ export default function Home() {
   };
   return (
     <div className={structure.pagegrid}>
-      <Title style={{ gridColumn: '1 / span 10', gridRow: '1' }}> Welcome to Untitled.Mov!</Title>
-      <div style={{ gridColumn: `5 / span 10`, gridRow: '2 / span 8' }}>
+      <Title className={text.title} style={{ gridRow: '1' }}>
+        Welcome to Untitled.Mov!
+      </Title>
+      <div className={videoplayer.homePlayer}>
         {video ? (
           <VideoPlayer video={video} />
         ) : (
@@ -44,7 +48,7 @@ export default function Home() {
           </Skeleton>
         )}
       </div>
-      <div style={{ gridColumn: '1 / span 18', gridRow: '10' }}>
+      <div className={scrollers.scroller} style={{ gridRow: '10' }}>
         <RecentVideoBar title='Recent Videos' />
       </div>
     </div>
